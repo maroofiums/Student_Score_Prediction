@@ -10,8 +10,7 @@ MODEL_PATH = Path(__file__).parent / "best_student_score_model.pkl"
 
 model = joblib.load(MODEL_PATH)
 
-st.title("📊 Student Exam Score Predictor")
-
+st.markdown("# **Student Exam Score Predictor**")
 st.write("""
 Predict a student's exam score based on study hours, sleep hours, attendance, and previous scores.
 """)
