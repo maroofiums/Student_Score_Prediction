@@ -1,28 +1,29 @@
-# 📚 Student Exam Score Prediction
+# Student Exam Score Prediction
 
 ## Overview
 
-This project predicts a student's **exam score** based on multiple factors such as:
+This project predicts a student's exam score based on multiple factors such as:
 
 * Hours studied per day
 * Sleep hours per day
 * Attendance percentage
 * Previous exam scores
 
-The model is trained using **multiple regression models** and the **best-performing model** is selected using **GridSearchCV**.
+The model is trained using multiple regression algorithms, and the best-performing model is selected using GridSearchCV. A Streamlit web application is included for real-time predictions.
 
-Additionally, the project includes a **Streamlit web app** for real-time predictions.
+**Live Streamlit App:** [Student Score Predictor](https://student-score-predictions.streamlit.app/)
+**Kaggle Notebook:** [Student Score Prediction](https://www.kaggle.com/code/maroofiums/student-score-prediction)
 
 ---
 
-## 🛠 Features
+## Features
 
 * **Data Cleaning & Exploration**
 
-  * Handled missing values and extreme outliers
-  * Visualized relationships between features and exam score
+  * Handled missing values and outliers
+  * Visualized relationships between features and exam scores
 
-* **Multiple Regression Models Tested**
+* **Regression Models Tested**
 
   1. Linear Regression
   2. Ridge Regression
@@ -33,18 +34,18 @@ Additionally, the project includes a **Streamlit web app** for real-time predict
 * **Model Selection**
 
   * GridSearchCV used for hyperparameter tuning
-  * Model performance evaluated using **R²**, **MAE**, and **MSE**
-  * Best model serialized as **best_student_score_model.pkl**
+  * Model performance evaluated using R², MAE, and MSE
+  * Best model saved as `best_student_score_model.pkl`
 
-* **Streamlit App**
+* **Streamlit Web Application**
 
-  * Interactive sliders for input features
+  * Interactive sliders for user input
   * Predicts exam score in real-time
   * User-friendly interface
 
 ---
 
-## 💻 Installation
+## Installation
 
 1. Clone the repository:
 
@@ -62,14 +63,14 @@ pip install -r requirements.txt
 3. Run the Streamlit app:
 
 ```bash
-streamlit run app.py
+streamlit run app/main.py
 ```
 
 ---
 
-## 🧠 Usage
+## Usage
 
-1. Open the app in browser.
+1. Open the Streamlit app in a browser.
 2. Adjust sliders for:
 
    * Hours Studied
@@ -77,11 +78,11 @@ streamlit run app.py
    * Attendance Percent
    * Previous Exam Scores
 3. Click **Predict Exam Score**.
-4. The app displays the predicted exam score instantly.
+4. The predicted exam score is displayed instantly.
 
 ---
 
-## 📊 Dataset Details
+## Dataset Details
 
 | Feature            | Description                               |
 | ------------------ | ----------------------------------------- |
@@ -93,25 +94,34 @@ streamlit run app.py
 
 ---
 
-## 📈 Model Performance
+## Model Performance
 
-| Model                                     | R² Score | MAE | MSE |
-| ----------------------------------------- | -------- | --- | --- |
-| Gradient Boosting                         | **Best** | x   | y   |
-| Random Forest                             | Good     | x   | y   |
-| Linear Regression                         | Baseline | x   | y   |
-| *(Fill with your results after training)* |          |     |     |
+| Model             | R² Score | MAE | MSE |
+| ----------------- | -------- | --- | --- |
+| Gradient Boosting | Best     | x   | y   |
+| Random Forest     | Good     | x   | y   |
+| Linear Regression | Baseline | x   | y   |
+
+*(Fill in your actual performance metrics from training)*
 
 ---
 
-## 🔧 Project Workflow
+## Project Workflow
 
-1. **Load Dataset** → Inspect & clean data
-2. **Exploratory Data Analysis (EDA)** → Visualize feature relationships
-3. **Train/Test Split** → 80/20 split
-4. **Train Multiple Regression Models** → Tune hyperparameters using GridSearchCV
-5. **Select Best Model** → Based on highest R² score
-6. **Serialize Model** → Save as `.pkl` file
-7. **Deploy Streamlit App** → Real-time predictions
+1. Load Dataset → Inspect & clean data
+2. Exploratory Data Analysis (EDA) → Visualize feature relationships
+3. Train/Test Split → 80/20 split
+4. Train Multiple Regression Models → Tune hyperparameters using GridSearchCV
+5. Select Best Model → Based on highest R² score
+6. Serialize Model → Save as `.pkl` file
+7. Deploy Streamlit App → Real-time predictions
+
+---
+
+## Future Improvements
+
+* Add feature importance visualization
+* Support batch predictions via CSV upload
+* Add historical performance charts for students
 
 ---
